@@ -13,8 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', DashboardController::class);
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::name('kermis.')->middleware('auth')->group(function () {
+    Route::get('/', DashboardController::class)->name('dashboard');
+
+    //Route::get('me');
+});
