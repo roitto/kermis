@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,9 +18,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    @livewireStyles
 </head>
-<body>
-    <div id="app">
+<body class="h-full">
+    <div id="app" class="h-full">
         <header class="bg-gray-800 p-2 mt-0 fixed w-full z-10 top-0"">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -74,13 +76,13 @@
         </nav>
         -->
 
-        <main class="py-4">
-            <div class="container">
-                <div class="flex justify-center">
-                    @yield('content')
-                </div>
+        <main class="py-4 h-full">
+            <div class="container mx-auto px-4 h-full">
+                @yield('content')
             </div>
         </main>
     </div>
+
+    @livewireScripts
 </body>
 </html>
