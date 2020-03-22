@@ -1,4 +1,4 @@
-<div>
+<div class="mb-6">
     <label @isset($id) for="{{ $id }}" @endisset class="text-xs text-gray-500">
         {{ $label }}
     </label>
@@ -8,13 +8,13 @@
         type="{{ $type }}"
         name="{{ $name }}"
         value="{{ $value }}"
-        class="bg-transparent border-b m-auto block border-grey w-full mb-6 text-grey-darker pb-1 rounded focus:bg-gray-200  @error($name) is-invalid @enderror"
+        class="bg-transparent border-b m-auto block border-grey w-full text-gray-800 px-2 py-1 rounded focus:bg-gray-200  @error($name) border-2 border-red-400 @enderror"
         {{ $attributes }}
     />
 
     @error($name)
-        <span class="invalid-feedback" role="alert">
-            <strong>{{ $message }}</strong>
+        <span class="text-red-800 text-bold" role="alert">
+            {{ $message }}
         </span>
     @enderror
 </div>

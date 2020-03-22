@@ -42,9 +42,9 @@
                     />
 
                     <x-input 
-                        id="password-confirm"
+                        id="password_confirmation"
                         type="password"
-                        name="password-confirmation"
+                        name="password_confirmation"
                         autocomplete="new-password"
                         :label="__('Confirm Password')"
                         value=""
