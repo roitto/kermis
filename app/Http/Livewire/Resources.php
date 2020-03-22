@@ -14,11 +14,11 @@ class Resources extends Component
     public $resources;
 
     /**
-     * Create a new livewire component instance.
+     * When component is mounted.
      *
      * @return void
      */
-    public function __construct()
+    public function mount()
     {
         $this->resources = $this->getResources();
     }

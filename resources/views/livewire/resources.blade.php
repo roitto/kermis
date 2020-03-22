@@ -4,9 +4,9 @@
     </div>
     <div class="w-full flex-1 flex flex-wrap">
         @foreach ($resources as $resource)
-            <x:resource>
-                {{ $resource->name }}
-            </x:resource> 
+            @livewire('resource-card', [
+                'resource' => $resource,
+            ])
         @endforeach
     </div>
 </div>
