@@ -13,6 +13,8 @@ class Resources extends Component
 
     public $resources;
 
+    protected $listeners = ['changeLocation'];
+
     /**
      * When component is mounted.
      *

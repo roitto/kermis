@@ -8,6 +8,11 @@ class ResourceCard extends Component
 {
     public $resource;
 
+    public function changeLocation()
+    {
+        $this->emit('changeLocation', $this->resource->id);
+    }
+
     /**
      * When component is mounted.
      *
